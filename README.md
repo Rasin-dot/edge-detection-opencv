@@ -67,7 +67,7 @@ plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.title('Original Image')
 plt.axis('off')
 ```
-<img width="376" height="377" alt="image" src="https://github.com/user-attachments/assets/e779aefa-f747-4d25-be28-2fdeaeda4d36" />
+<img width="385" height="377" alt="image" src="https://github.com/user-attachments/assets/90664c38-7e72-4a63-855c-611a96abb674" />
 
 ```python
 sobel_x = cv2.Sobel(gray_image, cv2.CV_64F, 1, 0, ksize=5)  # Sobel in x direction
@@ -77,7 +77,7 @@ plt.imshow(sobel_combined, cmap='gray')
 plt.title('Sobel Edge Detection')
 plt.axis('off')
 ```
-<img width="371" height="381" alt="image" src="https://github.com/user-attachments/assets/5810e0c4-8261-4413-8fd0-7d116282cbbf" />
+<img width="402" height="387" alt="image" src="https://github.com/user-attachments/assets/de2fcff8-cab7-475b-b705-8a3440a25623" />
 
 ```python
 laplacian = cv2.Laplacian(gray_image, cv2.CV_64F)
@@ -85,7 +85,7 @@ plt.imshow(laplacian, cmap='gray')
 plt.title('Laplacian Edge Detection')
 plt.axis('off')
 ```
-<img width="371" height="371" alt="image" src="https://github.com/user-attachments/assets/0be7a140-d6b5-4971-ac95-b6bedced5f46" />
+<img width="365" height="372" alt="image" src="https://github.com/user-attachments/assets/73c9004c-4287-44f5-9156-35ba33ee5996" />
 
 ```python
 
@@ -94,7 +94,7 @@ plt.imshow(canny_edges, cmap='gray')
 plt.title('Canny Edge Detection')
 plt.axis('off')
 ```
-<img width="371" height="382" alt="image" src="https://github.com/user-attachments/assets/95dd25f1-51b7-407c-a958-e55ad136ddc8" />
+<img width="377" height="380" alt="image" src="https://github.com/user-attachments/assets/74b1a08a-69df-4d48-a864-fc106c522b4e" />
 
 ```python
 image = cv2.imread("wolf.jpg")
@@ -117,7 +117,7 @@ plt.imshow(canny_edges, cmap='gray')
 plt.title('Prewitt Edge Detection')
 plt.axis('off')
 ```
-<img width="370" height="378" alt="image" src="https://github.com/user-attachments/assets/c2be14fa-db07-4ce0-b118-5eea1874a4a2" />
+<img width="400" height="391" alt="image" src="https://github.com/user-attachments/assets/a702c03d-15a8-4186-93a1-ee8d05c38a1a" />
 
 
 
