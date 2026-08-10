@@ -1,7 +1,5 @@
 # Edge-detection-opencv
 
-### Developed By
-
 ### Name: Rasindhan R
 ### Register No: 212224230222
 
@@ -55,7 +53,7 @@ Display all edge-detected images for comparison.
   
 ## Program and output
 
-```python
+```
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -67,9 +65,9 @@ plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.title('Original Image')
 plt.axis('off')
 ```
-<img width="385" height="377" alt="image" src="https://github.com/user-attachments/assets/90664c38-7e72-4a63-855c-611a96abb674" />
+<img width="750" height="562" alt="image" src="https://github.com/user-attachments/assets/940486f3-ffb3-4bab-a4a4-9cadb37cd168" />
 
-```python
+```
 sobel_x = cv2.Sobel(gray_image, cv2.CV_64F, 1, 0, ksize=5)  # Sobel in x direction
 sobel_y = cv2.Sobel(gray_image, cv2.CV_64F, 0, 1, ksize=5)  # Sobel in y direction
 sobel_combined = cv2.magnitude(sobel_x, sobel_y)  # Combine both directions
@@ -77,47 +75,25 @@ plt.imshow(sobel_combined, cmap='gray')
 plt.title('Sobel Edge Detection')
 plt.axis('off')
 ```
-<img width="402" height="387" alt="image" src="https://github.com/user-attachments/assets/de2fcff8-cab7-475b-b705-8a3440a25623" />
+<img width="726" height="547" alt="image" src="https://github.com/user-attachments/assets/7df2dd3d-4a27-47c3-90e7-638b26d844a7" />
 
-```python
+```
 laplacian = cv2.Laplacian(gray_image, cv2.CV_64F)
 plt.imshow(laplacian, cmap='gray')
 plt.title('Laplacian Edge Detection')
 plt.axis('off')
 ```
-<img width="365" height="372" alt="image" src="https://github.com/user-attachments/assets/73c9004c-4287-44f5-9156-35ba33ee5996" />
+<img width="716" height="547" alt="image" src="https://github.com/user-attachments/assets/b79cbdac-73b2-4395-834c-58fa6510084a" />
 
-```python
+```
 
 canny_edges = cv2.Canny(gray_image, 50, 150)
 plt.imshow(canny_edges, cmap='gray')
 plt.title('Canny Edge Detection')
-plt.axis('off')
+plt.axis('off')  
 ```
-<img width="377" height="380" alt="image" src="https://github.com/user-attachments/assets/74b1a08a-69df-4d48-a864-fc106c522b4e" />
+<img width="733" height="557" alt="image" src="https://github.com/user-attachments/assets/d8ccf23e-e9ca-4883-a399-7ed5b21b7843" />
 
-```python
-image = cv2.imread("wolf.jpg")
-
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-prewitt_x = np.array([[1, 0, -1],
-                      [1, 0, -1],
-                      [1, 0, -1]])
-
-prewitt_y = np.array([[1, 1, 1],
-                      [0, 0, 0],
-                      [-1, -1, -1]])
-
-prewitt_x_edge = cv2.filter2D(gray, -1, prewitt_x)
-prewitt_y_edge = cv2.filter2D(gray, -1, prewitt_y)
-prewitt = cv2.magnitude(prewitt_x_edge.astype(np.float32),
-                        prewitt_y_edge.astype(np.float32))
-
-plt.imshow(canny_edges, cmap='gray')
-plt.title('Prewitt Edge Detection')
-plt.axis('off')
-```
-<img width="400" height="391" alt="image" src="https://github.com/user-attachments/assets/a702c03d-15a8-4186-93a1-ee8d05c38a1a" />
 
 
 
